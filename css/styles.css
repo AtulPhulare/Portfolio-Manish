@@ -18,24 +18,66 @@ header {
     z-index: 1000;
 }
 
-nav ul {
+nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 24px;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.nav-center {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li a {
+.nav-center li {
+    margin: 0 15px;
+}
+
+.nav-center li a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-center li a:hover {
     color: #bb86fc;
     transform: scale(1.1);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin-left: 15px;
+    color: #f0f0f0;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #bb86fc;
+    transform: scale(1.2);
 }
 
 /* Hero Section */
@@ -154,7 +196,7 @@ nav ul li a:hover {
 }
 
 .portfolio-item:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
@@ -174,25 +216,23 @@ nav ul li a:hover {
 .contact p {
     font-size: 18px;
     color: #e0e0e0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact input, .contact textarea {
     width: 100%;
-    max-width: 500px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: none;
-    border-radius: 5px;
     background-color: #333333;
     color: #f0f0f0;
     font-size: 16px;
+    border-radius: 5px;
 }
 
 .contact button {
@@ -213,40 +253,28 @@ nav ul li a:hover {
 
 /* Footer Section */
 footer {
-    padding: 20px;
-    background-color: #333333;
-    color: #f0f0f0;
+    background-color: #1a1a1a;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
+    padding: 20px;
+    color: #f0f0f0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .about, .portfolio, .contact {
-        padding: 30px 20px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
+    .nav-left, .nav-center, .nav-right {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .nav-center {
+        margin-top: 10px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .nav-center li {
+        margin: 10px;
     }
 }
