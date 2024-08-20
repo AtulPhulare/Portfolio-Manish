@@ -30,25 +30,27 @@ nav {
 }
 
 .logo {
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
 }
 
 .name {
-    font-size: 24px;
+    font-size: 22px;
     color: #f0f0f0;
-    font-weight: bold;
 }
 
 .nav-center {
     display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
 }
 
 .nav-center li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .nav-center li a {
@@ -69,15 +71,15 @@ nav {
 }
 
 .social-icon {
-    margin-left: 15px;
     color: #f0f0f0;
-    font-size: 24px;
+    font-size: 20px;
+    margin-left: 15px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover {
     color: #bb86fc;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -220,19 +222,22 @@ nav {
 }
 
 .contact form {
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
     width: 100%;
+    max-width: 500px;
     padding: 15px;
     margin-bottom: 15px;
     border: none;
+    border-radius: 5px;
     background-color: #333333;
     color: #f0f0f0;
     font-size: 16px;
-    border-radius: 5px;
 }
 
 .contact button {
@@ -253,28 +258,92 @@ nav {
 
 /* Footer Section */
 footer {
+    padding: 20px;
     background-color: #1a1a1a;
     text-align: center;
-    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
     color: #f0f0f0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-left, .nav-center, .nav-right {
-        flex-direction: column;
-        align-items: center;
-    }
-
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
     .nav-center {
-        margin-top: 10px;
+        display: none;
     }
 
     .nav-right {
-        margin-top: 10px;
+        margin-left: auto;
     }
 
-    .nav-center li {
-        margin: 10px;
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero button {
+        font-size: 16px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about p,
+    .contact p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right .social-icon {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .about h2,
+    .portfolio h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-item p,
+    .contact p {
+        font-size: 14px;
     }
 }
