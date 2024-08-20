@@ -145,13 +145,12 @@ nav {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #bb86fc;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .about img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 30px #bb86fc, 0 0 60px #bb86fc, 0 0 90px #bb86fc;
 }
 
 /* Portfolio Section */
